@@ -1,8 +1,11 @@
 import react from "react";
 import { useNavigate } from "react-router-dom";
 import { useState ,useRef, useEffect } from "react";
+// import { useAuth } from "../AuthContext"; // Import the custom hook
+
 const Navbar = () => {
   const navigate = useNavigate();
+  
 
   function handleRedirect() {
     navigate("/");
@@ -10,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="  border-b-slate-50 border-b-2">
+      <nav className="  border-b-slate-50 border-b-2" >
         <div className=" flex items-center  bg-white border-b-gray-900">
           <div className="ml-8 ">
             <button onClick={handleRedirect}>
@@ -43,8 +46,8 @@ const Navbar = () => {
           <div className="ml-16">
             < CreateAndManageProject/>
           </div>
-          <div className="ml-96 w-20 ">user info</div>
-          <div className="ml-28">user logo</div>
+          <div className="ml-40 w-20 "><UserProfile/></div>
+          
         </div>
       </nav>
     </>
@@ -309,3 +312,27 @@ const CreateAndManageProject = () => {
     </>
   );
 };
+
+const UserProfile=()=>{
+  // const { currentUser } = useAuth(); // Access currentUser from AuthContext
+  return(
+    <>
+     <div className="flex items-center space-x-1 ml-[72px] w-auto">
+          {/* Display user's name */}
+          <div className="h-auto"> 
+       {/* <div>   <span className="text-black">{currentUser.displayName}</span></div> */}
+          {/* Display user's email */}
+          {/* <div>  <span className="text-black">{currentUser.email}</span></div> */}
+          </div>
+          {/* Display user's profile picture */}
+          <div>
+          {/* <img
+            src={currentUser.photoURL ||  "https://www.example.com/default-avatar.png"} // Fallback image if no profile picture
+            alt="User Avatar"
+            className="w-8 h-8 rounded-full"
+          /> */}
+          </div>
+        </div>
+    </>
+  )
+}

@@ -5,11 +5,11 @@ import Landing from "./Landing.jsx"
 const  Home=()=> {
   return (
     <>
-   <Navbar/>
-   <section className='flex'>
-   <Services/>
-  <Landing />
-  </section>
+      <Navbar/>
+      <section className='flex'>
+      <Services/>
+      <Landing />
+      </section>
     </>
   )
 }
