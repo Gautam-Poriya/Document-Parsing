@@ -11,17 +11,18 @@ import Parse from "./Components/Parse.jsx";
 import Settings from "./Components/Settings.jsx";
 import OragnizationMembers from "./Components/OragnizationMembers.jsx";
 import ApiKey from "./Components/ApiKey";
-// import SignIn from "./SignIn";
+import SignIn from "./SignIn";
 import AuthProvider from "./AuthContext";
 import PrivateRoute from "./PrivateRoute";
 function App() {
   return (
    
-     
+   
       <Router>
         <Routes>
+          
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Home />} />
-          {/* <Route path="/signin" element={<SignIn />} /> */}
           <Route path="/parse" element={<Parse />} />
           <Route path="/settings" element={<Settings />} />
           <Route
@@ -32,7 +33,7 @@ function App() {
           <Route path="/parse/history" element={<History />}/>
         </Routes>
       </Router>
-     
+      
   )
 }
 

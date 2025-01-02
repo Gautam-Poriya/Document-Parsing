@@ -6,13 +6,13 @@ import "./index.css";
 import ReactDOM from 'react-dom';
 import { OrganizationProvider } from "./Components/OrganizationContext";
 console.log('Hello World');
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
     
-    <App />
+//     <App />
     
-  </React.StrictMode>
-);
+//   </React.StrictMode>
+// );
 // const rootElement = document.getElementById("root");
 
 // if (rootElement) {
@@ -30,11 +30,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 //   );
 // }
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
 // const rootElement = document.getElementById('root');
 // const root = createRoot(rootElement);
 // root.render(
